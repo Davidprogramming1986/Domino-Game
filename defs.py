@@ -1,11 +1,16 @@
 import pygame
 pygame.init()
 
+FPS = 60
+
 display = pygame.display.Info()
 width = display.current_w
 height = display.current_h
 
 display = pygame.display.set_mode((width, height))
+
+mouse_x = 0
+mouse_y = 0
 
 # Sets grid width to percentage of screen
 grid_width = 0.4
