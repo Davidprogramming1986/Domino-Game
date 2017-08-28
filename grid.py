@@ -43,6 +43,9 @@ class Grid():
                         return False
 
     def init_grid_numbers(self):
+        self.grid_numbers = []
+        self.dominos = defs.dominos[:]
+
         # Fill with false values
         for y in range(defs.y_grid_squares):
             row = []

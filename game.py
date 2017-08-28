@@ -20,11 +20,16 @@ grid = grid.Grid()
 
 count = 0
 
+def init_grid_numbers():
+    for n in range(50):
+        print(n)
+        try:
+            grid.init_grid_numbers()
+        except IndexError:
+            continue
+        break
 
-grid.init_grid_numbers()
-
-
-print(grid.grid_numbers)
+init_grid_numbers()
 
 while not game_over:
 
@@ -42,6 +47,9 @@ while not game_over:
 
     # Graphics
     display.fill(colors.WHITE)
+
+    for n in range(56):
+        display.blit(defs.grid_value_font.render('Test', True, colors.BLACK), (n, 500))
 
     grid.render_grid()
 
